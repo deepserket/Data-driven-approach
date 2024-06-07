@@ -1,0 +1,24 @@
+Analyzing giacenze03062024.csv:
+scaff:  {'A': 1298096, 'C': 2092805, 'D': 236890}	cassette e colli: 131155,  depositi: 305819
+---------------------------------------------------
+Analyzing giacenze04062024.csv:
+scaff:  {'A': 1304760, 'C': 2057442, 'D': 235949}	cassette e colli: 171406,  depositi: 306134
+---------------------------------------------------
+Analyzing giacenze05062024.csv:
+scaff:  {'A': 1308715, 'C': 1935500, 'D': 233282}	cassette e colli: 181124,  depositi: 305349
+---------------------------------------------------
+Analyzing giacenze06032024.csv:
+scaff:  {'A': 1374652, 'C': 2664009, 'D': 268059}	cassette e colli: 142329,  depositi: 362899
+---------------------------------------------------
+Analyzing giacenze06062024-1100.csv:
+scaff:  {'A': 1309684, 'C': 1970226, 'D': 232293}	cassette e colli: 184997,  depositi: 305424
+---------------------------------------------------
+Analyzing giacenze06062024-1530.csv:
+scaff:  {'A': 1315020, 'C': 1958586, 'D': 227636}	cassette e colli: 183040,  depositi: 305463
+---------------------------------------------------
+Analyzing giacenze06062024-1700.csv:
+scaff:  {'A': 1312930, 'C': 1961325, 'D': 227408}	cassette e colli: 183753,  depositi: 305203
+---------------------------------------------------
+Analyzing giacenze26042024.csv:
+scaff:  {'A': 1280534, 'C': 2767559, 'D': 257897}	cassette e colli: 302437,  depositi: 318599
+---------------------------------------------------
