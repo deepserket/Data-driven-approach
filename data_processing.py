@@ -57,6 +57,6 @@ def stats_of_each_file():
 #   Automatic DB export
 #   Cool Graphs (OwO)
 #   Priorities
-#   Search for UDCs and UDMs for fast refill (With LIFO)
+#   Search for UDCs and UDMs for fast refill (With FIFO?)
 #   Managing mixed UDCs
 #   etc...
