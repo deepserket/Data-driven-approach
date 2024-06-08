@@ -6,8 +6,9 @@ from collections import Counter, defaultdict
 import numpy as np
 import pandas as pd
 
-def stats_of_each_file():
+def stats_over_time():
     # displays basic stats of the warehouse for each DB export in the current directory
+    do_not_read = ("AXXXXXXX", "DC_ONDEMAND", "COOP0001", "COLLH001", "COLLAUDO", "COOP0000", "DEPFILTR")
     for file in glob("giacenze*.csv"):
         if "dettagli" in file: continue
         print(f"Analyzing {file}:")
@@ -36,9 +37,9 @@ def stats_of_each_file():
                "D": 0}
         cass = 0
         dep = 0
-        
+
         for index, row in df.iterrows():
-            if row.Vano in ("AXXXXXXX", "DC_ONDEMAND"): continue
+            if row.Vano in do_not_read: continue
             dispo = int(row.dispo)
             if row.Vano == "P0100000" or row.Vano == "R0000000":
                 cass += dispo
@@ -47,10 +48,9 @@ def stats_of_each_file():
                     dep += dispo
                 else:
                     tot[row.Vano[0]] += dispo
-        print("scaff: ", tot, end="\t")
-        print(f"cassette e colli: {cass},  depositi: {dep}")
-        print("---------------------------------------------------")
-
+        print("scaff: ", tot, end=" |\t")
+        print(f"cassette e colli: {cass} |  depositi: {dep}")
+        print("================================================================================================")
 
 # TODO
 #   Data cleaning
