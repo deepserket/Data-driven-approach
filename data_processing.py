@@ -22,7 +22,8 @@ def stats_over_time():
         df = df.rename(columns = {'Q.tà disp.': "dispo",
                                   'Q.tà riordino': "riordino", 
                                   'Q.tà max': "Qmax", 
-                                  'Cat. Merceologica': "categoria"})
+                                  'Cat. Merceologica': "categoria",
+                                  'Descrizione articolo': 'Descrizione'}) #TODO standardization of cases
         
         if df.Udc[0] is pd.NA: # remove "Total" row
             df = df.iloc[1:, :]
@@ -40,6 +41,7 @@ def stats_over_time():
 
         for index, row in df.iterrows():
             if row.Vano in do_not_read: continue
+            if row.Descrizione.startswith("SEMIL"): continue # what is this product?
             dispo = int(row.dispo)
             if row.Vano == "P0100000" or row.Vano == "R0000000":
                 cass += dispo
