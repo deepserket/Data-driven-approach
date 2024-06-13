@@ -22,7 +22,7 @@ def stats_over_time():
         print(f"cassette e colli: {cass} |  depositi: {dep}")
         print("================================================================================================")
 
-@lru_cache
+@lru_cache # lru_cache returns the same object, do not modify in place the result!
 def stats(file):
     # return basic stats 
     do_not_read = ("AXXXXXXX", "DC_ONDEMAND", "COOP0001", "COLLH001", "COLLAUDO", "COOP0000", "DEPFILTR")
@@ -63,6 +63,7 @@ def plot_stats_over_time():
         ax.plot(dates, [v[i] for v in values], label=l)
     ax.set_yscale('log') # is log good enough? maybe a % of products above 0 or above qta_riordino might be better
     ax.legend()
+    ax.tick_params(axis='x', labelrotation=45)
     plt.show()
 
 def plot_change_over_time():
