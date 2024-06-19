@@ -58,10 +58,12 @@ def plot_stats_over_time():
         t, c, d = stats(file)
         values.append([*list(t.values()), c, d])
     fig, ax = plt.subplots()
-    labels = "A", "C", "D", "Refill", "Depositi"
+    labels = "A - 900k", "C", "D", "Refill", "Depositi"
+    for v in values:
+        v[0] -= 900_000 
     for i, l in enumerate(labels):
         ax.plot(dates, [v[i] for v in values], label=l)
-    ax.set_yscale('log') # is log good enough? maybe a % of products above 0 or above qta_riordino might be better
+    #ax.set_yscale('log') # is log good enough? maybe a % of products above 0 or above qta_riordino might be better
     ax.legend()
     ax.tick_params(axis='x', labelrotation=45)
     plt.show()
